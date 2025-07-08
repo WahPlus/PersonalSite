@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@font-face {
+  font-family: "Coolvetica";
+  src: url("coolvetica.ttf") format("truetype");
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    background: linear-gradient(to bottom, #0A0038, #260038);
+    color: white;
+    font-family: "DM Sans", sans-serif;
+    padding: 1rem;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.625em;
+    fill: white;
+}
+
+a:link {
+    -font-family: "Coolvetica", sans-serif;
+    color: white;
+    -text-decoration: none;
+    font-weight: bold;
+}
+
+a:visited {
+    -font-family: "Coolvetica", sans-serif;
+    font-style: italic;
+    color: white;
+    -text-decoration: none;
+    font-weight: bold;
+}
+
+p {
+    font-size: large;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Coolvetica", sans-serif;
+    font-style: italic;
+}
+
+.motd {
+    text-align: center;
+    font-style: italic;
+}
