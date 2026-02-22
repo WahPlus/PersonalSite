@@ -1,40 +1,62 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-@font-face {
-  font-family: "Coolvetica";
-  src: url("coolvetica.ttf") format("truetype");
-}
-
-html {
-    min-height: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 body {
-    background: linear-gradient(to bottom, #0A0038, #420061);
+    background-color: #101020;
     color: white;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Space Mono", monospace;
+}
+
+.cardscene {
+    display: flex;
     padding: 1rem;
+    perspective: 600px;
 }
 
-.icon {
-    width: 2em;
-    height: 2em;
-    vertical-align: -0.625em;
-    fill: white;
+.cardgrid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(13em, 1fr));
+    gap: 2em;
 }
 
-a:link {
-    -font-family: "Coolvetica", sans-serif;
-    color: white;
-    -text-decoration: none;
-    font-weight: bold;
+.card {
+    border-radius: 1em;
+    box-shadow: 0 0 2em rgba(200, 200, 255, 0.25);
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    cursor: pointer;
+    aspect-ratio: 1;
 }
 
-a:visited {
-    -font-family: "Coolvetica", sans-serif;
-    font-style: italic;
-    color: white;
-    -text-decoration: none;
-    font-weight: bold;
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.front, .back {
+    background-color: #151525;
+    border-radius: 1em;
+    display: flex;
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1em;
+    gap: 0.2em;
+}
+
+.front img {
+    object-fit: contain;
+    min-height: 0;
+}
+
+.back {
+    transform: rotateY(180deg);
 }
 
 p {
@@ -42,12 +64,55 @@ p {
 }
 
 h1 {
+    margin: 0;
     text-align: center;
-    font-family: "Coolvetica", sans-serif;
-    font-style: italic;
+    font-size: 3em;
 }
 
 .motd {
+    margin: auto;
     text-align: center;
     font-style: italic;
+}
+
+.topbar {
+    font-family: "Space Grotesk", sans-serif;
+    background-color: #202030;
+    padding: 1em;
+}
+
+.ticker-wrapper {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.ticker-track {
+    font-size: small;
+    display: inline-block;
+    animation: scroll-left 60s linear infinite;
+}
+
+@keyframes scroll-left {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.ticker-track-rev {
+    font-size: small;
+    display: inline-block;
+    animation: scroll-right 60s linear infinite;
+}
+
+@keyframes scroll-right {
+    0%   { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
 }
