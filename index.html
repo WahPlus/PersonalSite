@@ -2,116 +2,17 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="styles.css">
-        <title>sting.lt</title>
+        <title>Callisto Turnstile</title>
     </head>
     <body>
-        <div class="ticker-wrapper">
-            <div class="ticker-track">
-                <!-- This is a really horrible solution, but I'm not good at HTML, okay? -->
-                <span>HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO</span>
+        <h2><b><i>Callisto Turnstile™</i></b></h2>
+        <div class="centered-stuff">
+            <div>
+                <h1>Our systems suspect that you or someone on your behalf may have committed illegal activities such as:</h1>
+                <p>Aggravated assault, Aiding and abetting/accessory, Arson, Assault/battery, Attempt, Bribery, Burglary, Child abandonment, Child abuse, Child neglect, Child pornography, Computer crime, Conspiracy, Counterfeiting, Credit/debit card fraud, Criminal contempt of court, Cyberbullying, Disorderly conduct, Disturbing the peace, Domestic violence, Drug manufacturing and cultivation, Drug possession, Drug trafficking/distribution, DUI/DWI, Embezzlement, Extortion, Forgery, Fraud, Harassment, Hate crimes, Homicide, Identity theft, Insurance fraud, Identity theft, Kidnapping, Manslaughter: Involuntary, Manslaughter: Voluntary, Medical Marijuana, MIP: A minor in possession, Money laundering, Murder: First-degree, Murder: Second-degree, Obstruction of justice, Open container (of alcohol), Parole violation, Perjury, Probation violation, Prostitution, Public intoxication, Pyramid schemes, Racketeering/RICO, Rape, Robbery, Securities fraud, Sexual assault, Shoplifting, Solicitation, Stalking, Statutory rape, Tax evasion/fraud, Telemarketing fraud, Theft, Vandalism, White collar crimes, Wire fraud</p>
+                <h1>Data such as your Internet Protocol address has been logged and forwarded to authorities.</h1>
             </div>
         </div>
-
-        <div class="topbar">
-            <h1>sting.lt</h1>
-            <p id="motd" class="motd"></p>
-        </div>
-
-        <div class="ticker-wrapper">
-            <div class="ticker-track-rev">
-                <!-- This is a really horrible solution, but I'm not good at HTML, okay? -->
-                <span>HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO HELLO</span>
-            </div>
-        </div>
-
-        <script>
-            const messages = [
-                "Abort, Retry, Fail?",
-                "Something went wro- Oh wait, no it didn't.",
-                "I live in Spain without the A.",
-                "Welcome back!",
-                "You didn't forget to push...right?",
-                "Nothing is broken...yet.",
-                "Compiled without warnings, woohoo!",
-                "Wake up, git commit, repeat.",
-                "root@mainframe:~$",
-                "I love FOSS!",
-                "Soon...",
-                "I am NOT! A MORON!",
-                "It's hard to overstate my satisfaction.",
-                "Halyde is pretty cool, y'know."
-            ];
-
-            const randomIndex = Math.floor(Math.random() * messages.length);
-            document.getElementById("motd").textContent = messages[randomIndex];
-        </script>
-        <script>
-            function flipCard(clicked) {
-                document.querySelectorAll('.card').forEach(card => {
-                    if (card !== clicked) {
-                        card.classList.remove('flipped');
-                    }
-                });
-
-                clicked.classList.toggle('flipped');
-            }
-        </script>
-        <div class="cardscene">
-            <div class="cardgrid">
-                <div class="card" onclick="flipCard(this)">
-                    <div class="front">
-                        <img src="assets/wahwhiteoutline.png">
-                        <p>ABOUT ME</p>
-                    </div>
-                    <div class="back"><p style="font-size: 0.8em;">I (the creator of this site) am <b>Wah+</b>. I am male and I am also a minor. <small><em>What else do I even put here..?</em></small></p></div>
-                </div>
-                <div class="card" onclick="flipCard(this)">
-                    <div class="front">
-                        <img src="assets/interestswhiteoutline.png">
-                        <p>INTERESTS</p>
-                    </div>
-                    <div class="back"><p style="font-size: 0.8em;">My main interest is <b>computer science</b>, though I do a little bit of <b>cooking</b> and <b>art</b> as well, whenever I feel like it. I also quite like <b>playing video games</b>.</p></div>
-                </div>
-                <div class="card" onclick="flipCard(this)">
-                    <div class="front">
-                        <img src="assets/commsglow.png">
-                        <p>CONTACT INFO</p>
-                    </div>
-                    <div class="back">
-                        <p style="font-size: 0.8em;">I can be contacted on these platforms:</p>
-                        <ul style="font-size: 0.7em;">
-                            <li><b>Matrix</b> - wahplusplus:matrix.org</li>
-                            <li><b>GitHub</b> - @WahPlus</li>
-                            <li><b>Mastodon</b> - WahPlus@mastodon.social</li>
-                            <li><b>E-mail</b> - wahplus@proton.me</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card" onclick="flipCard(this)">
-                    <div class="front">
-                        <img src="assets/rssglow.png">
-                        <p>NEWS FEED</p>
-                    </div>
-                    <div class="back"><p style="font-size: 0.8em;">I have an <b>Atom</b> feed <a href="https://sting.lt/feeds/stuff.atom.xml">here</a> where I post random things that go on in my life. Feel free to add it to your news reader of choice!</p></div>
-                </div>
-                <div class="card" onclick="flipCard(this)">
-                    <div class="front">
-                        <img src="assets/cnblueglow.png">
-                        <p>CERULEAN BLUE</p>
-                    </div>
-                    <div class="back">
-                        <p style="font-size: 0.8em;">Cerulean Blue is a group of coders that I founded with Ponali. It is where most of my projects live.<br>
-                        <a href="https://cnblue.sting.lt">Website</a> - <a href="https://github.com/Team-Cerulean-Blue">GitHub</a></p>
-                    </div>
-                </div>
-                <div class="card" onclick="flipCard(this)">
-                    <div class="front">
-                        <img src="assets/mysteryglow.png">
-                        <p>THE WORD</p>
-                    </div>
-                    <div class="back"><p style="font-size: 2em;"><b>mugwump</b></p></div>
-                </div>
-            </div>
-        </div>
+        <img src="calavmark.png" class="calav">
     </body>
 </html>
